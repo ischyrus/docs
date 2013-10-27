@@ -127,7 +127,7 @@ Once you are logged in, you can try calling the API with and without the Authori
 
 You can get the user id on the Web API side by doing:
 
-      ClaimsPrincipal.Current.Claims.SingleOrDefault(c => c.Type == "sub").Value
+      ClaimsPrincipal.Current.Claims.SingleOrDefault(c => c.Type == "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier").Value
 
 If you want to get all the claims from the user (not just the id), you should specify `openid profile` (instead of just `openid`) in the scope parameter:
 
